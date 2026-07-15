@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className="relative min-h-screen bg-slate-950 text-white">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         {/* Glow */}
