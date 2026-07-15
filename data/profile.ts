@@ -10,7 +10,7 @@ export const profile = {
 
   email: "nguyenquocthai001005@email.com",
 
-  phone: "+84 xxx xxx xxx",
+  phone: "+84 358 097747",
 
   location: "Ho Chi Minh City, Vietnam",
 
