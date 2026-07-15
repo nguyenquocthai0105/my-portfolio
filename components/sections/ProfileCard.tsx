@@ -8,12 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-import {
-  MapPin,
-  Mail,
-  Download,
-  ExternalLink,
-} from "lucide-react";
+import { MapPin, Mail, Download, ExternalLink } from "lucide-react";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -77,14 +72,17 @@ export default function ProfileCard() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <Badge
-                  key={skill}
-                  className="border border-white/10 bg-white/[0.04] px-3 py-1 text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-white"
-                >
-                  {skill}
-                </Badge>
-              ))}
+              {skills
+                .filter((skill) => skill.category === "Frontend")
+                .slice(0, 6)
+                .map((skill) => (
+                  <Badge
+                    key={skill.name}
+                    className="border border-white/10 bg-white/[0.04] px-3 py-1 text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-white"
+                  >
+                    {skill.name}
+                  </Badge>
+                ))}
             </div>
 
             <div className="mt-12 flex flex-wrap gap-4">
