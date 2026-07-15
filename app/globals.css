@@ -142,3 +142,18 @@ body {
   background: #38bdf8;
   color: white;
 }
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+.animate-float-glow {
+  animation: floatGlow 6s ease-in-out infinite;
+}
