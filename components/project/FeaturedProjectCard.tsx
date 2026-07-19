@@ -7,11 +7,7 @@ import { Button } from "@/components/ui/button";
 
 import MacbookMockup from "./MacbookMockup";
 
-import {
-  CalendarDays,
-  CheckCircle2,
-  ExternalLink,
-} from "lucide-react";
+import { CalendarDays, CheckCircle2, ExternalLink } from "lucide-react";
 
 import { FaGithub } from "react-icons/fa";
 
@@ -28,10 +24,7 @@ export default function FeaturedProjectCard({ project }: Props) {
       {/* ================= IMAGE ================= */}
 
       <div className="p-8 pb-2">
-        <MacbookMockup
-          images={project.images}
-          title={project.title}
-        />
+        <MacbookMockup images={project.images} title={project.title} />
       </div>
 
       {/* ================= CONTENT ================= */}
@@ -78,9 +71,7 @@ export default function FeaturedProjectCard({ project }: Props) {
         {/* Highlights */}
 
         <div className="mt-10">
-          <h4 className="mb-5 text-xl font-semibold text-white">
-            Highlights
-          </h4>
+          <h4 className="mb-5 text-xl font-semibold text-white">Highlights</h4>
 
           <div className="grid gap-4 md:grid-cols-2">
             {project.highlights.map((item) => (
@@ -88,10 +79,7 @@ export default function FeaturedProjectCard({ project }: Props) {
                 key={item}
                 className="flex items-center gap-3 rounded-xl border border-cyan-400/10 bg-cyan-400/5 px-4 py-3"
               >
-                <CheckCircle2
-                  size={18}
-                  className="text-cyan-400"
-                />
+                <CheckCircle2 size={18} className="text-cyan-400" />
 
                 <span className="text-slate-300">{item}</span>
               </div>
@@ -108,18 +96,13 @@ export default function FeaturedProjectCard({ project }: Props) {
 
           <div className="space-y-4">
             {project.contributions.map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-3"
-              >
+              <div key={item} className="flex items-start gap-3">
                 <CheckCircle2
                   size={18}
                   className="mt-1 shrink-0 text-cyan-400"
                 />
 
-                <p className="leading-7 text-slate-300">
-                  {item}
-                </p>
+                <p className="leading-7 text-slate-300">{item}</p>
               </div>
             ))}
           </div>
@@ -146,10 +129,13 @@ export default function FeaturedProjectCard({ project }: Props) {
 
         {/* Buttons */}
 
+        {/* Buttons */}
+
         <div className="mt-12 flex flex-wrap gap-4">
-          {project.github && (
+          {/* Nút Git Client */}
+          {project.githubClient && (
             <a
-              href={project.github}
+              href={project.githubClient}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -158,17 +144,48 @@ export default function FeaturedProjectCard({ project }: Props) {
                 className="border-white/10 bg-white/[0.03] text-slate-200 transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/[0.05]"
               >
                 <FaGithub className="mr-2" />
-                GitHub
+                Git Client
               </Button>
             </a>
           )}
 
-          {project.demo && (
+          {/* Nút Git Admin */}
+          {project.githubAdmin && (
             <a
-              href={project.demo}
+              href={project.githubAdmin}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <Button
+                variant="outline"
+                className="border-white/10 bg-white/[0.03] text-slate-200 transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/[0.05]"
+              >
+                <FaGithub className="mr-2" />
+                Git Admin
+              </Button>
+            </a>
+          )}
+
+          {/* Nút Git Backend */}
+          {project.githubBackend && (
+            <a
+              href={project.githubBackend}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="border-white/10 bg-white/[0.03] text-slate-200 transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/[0.05]"
+              >
+                <FaGithub className="mr-2" />
+                Git Backend
+              </Button>
+            </a>
+          )}
+
+          {/* Nút Live Demo */}
+          {project.demo && (
+            <a href={project.demo} target="_blank" rel="noopener noreferrer">
               <Button className="bg-gradient-to-r from-cyan-400 to-violet-500 text-white shadow-[0_10px_30px_rgba(56,189,248,.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_35px_rgba(168,85,247,.35)]">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Live Demo
