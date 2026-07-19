@@ -71,7 +71,7 @@ export const projects: Project[] = [
     githubBackend:
       "https://github.com/nguyenquocthai0105/aa-studio-backend",
     demo:
-      "https://aa-studio-admin.vercel.app/",
+      "https://fe-three3d-photography.vercel.app/",
   },
   {
     id: 2,
