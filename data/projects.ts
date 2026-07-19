@@ -34,14 +34,14 @@ export const projects: Project[] = [
 
     title: "Á À Studio",
 
-    subtitle: "Photography Portfolio Website",
+    subtitle: "Full-Stack Photography Portfolio & CMS",
 
-    period: "2025",
+    period: "2025 - 2026",
 
     status: "Completed",
 
     description:
-      "A modern photography portfolio website built with HTML, CSS, JavaScript, and Three.js. The project features immersive animations, responsive layouts, interactive galleries, and smooth user experiences for showcasing photography works.",
+      "A secure, full-stack photography portfolio website and content management system (CMS). Features an immersive, responsive 3D frontend interface integrated with a robust Node.js backend, MongoDB database, and Cloudinary media hosting. Implemented JWT authentication and automated cloud storage lifecycle management to optimize performance and security.",
 
     images: [
       "/projects/aa-studio/1.jpg",
@@ -54,31 +54,38 @@ export const projects: Project[] = [
       "CSS3",
       "JavaScript",
       "Three.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB Atlas",
+      "Cloudinary API",
+      "JWT (JSON Web Tokens)",
     ],
 
     highlights: [
-      "Responsive Design",
-      "Interactive Gallery",
-      "Three.js Background",
-      "Custom Loading Animation",
-      "Smooth UI Animations",
-      "Modern Photography Showcase",
+      "Full-Stack Architecture",
+      "Secure Admin CMS Dashboard",
+      "Three.js 3D Interactive Background",
+      "JWT Authentication & Security Middleware",
+      "Automated Cloud Storage Cleanup",
+      "RESTful API Development",
+      "Automated CI/CD Deployment",
     ],
 
     contributions: [
-      "Designed and developed the complete frontend interface.",
-      "Built responsive layouts for desktop and mobile devices.",
-      "Implemented interactive image gallery and smooth page transitions.",
-      "Created immersive 3D visual effects using Three.js.",
-      "Optimized image loading and overall website performance.",
-      "Deployed the project to Vercel.",
+      "Designed and developed the complete frontend user interface and the secure Admin CMS dashboard.",
+      "Built a secure RESTful Backend API using Node.js and Express to manage media content and dynamic albums.",
+      "Integrated MongoDB Atlas for data persistence and Cloudinary for optimized cloud media hosting.",
+      "Architected a robust security layer implementing JWT authentication with customized middleware to protect administrative endpoints.",
+      "Developed an automated data-cleanup lifecycle using Cloudinary API to automatically purge obsolete images during delete/update mutations.",
+      "Created immersive 3D visual effects using Three.js and built fully responsive layouts for all screen sizes.",
+      "Configured and managed automated CI/CD deployment pipelines on Vercel (Frontend) and Render (Backend).",
     ],
 
     github:
       "https://github.com/nguyenquocthai0105/fe-three3d-photography",
 
     demo:
-      "https://fe-three3d-photography.vercel.app/",
+      "https://aa-studio-admin.vercel.app/",
   },
 
   {
